@@ -1,4 +1,11 @@
+'use client'
+
+import { useState } from 'react'
+
 export default function Home() {
+
+  const [value, setValue] = useState('AUDI')
+
   return (
     <main className="flex gap-2 justify-center items-center">
       <h1>Home page</h1>
@@ -17,6 +24,9 @@ export default function Home() {
       </div>
       <div>
         <input type="text" placeholder="Search..." />
+      </div>
+      <div>
+        <input type="text" defaultValue={value} onChange={(e) => setValue(e.target.value)}/>
       </div>
     </main>
   )

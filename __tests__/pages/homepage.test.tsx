@@ -24,8 +24,13 @@ describe('Home Page - Rendering', () => {
     })
 
     it('should find input failed by placeholder text Search ', () => {
-        render (<Home />);
+        render (<Home />);  
         expect(screen.getByPlaceholderText(/Search/)).toBeInTheDocument()
+    })
+
+    it('Should find input field with display value', () => {
+        render(<Home />);
+        screen.getByDisplayValue(/AUDI/)
     })
 
 });
